@@ -1,5 +1,5 @@
 {
-  "name": "evaui",
+  "name": "ui",
   "private": true,
   "scripts": {
     "build": "turbo build",
