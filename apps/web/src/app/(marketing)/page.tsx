@@ -87,7 +87,7 @@ const ColorConverter: React.FC = () => {
 
   return (
     <div className="">
-      <input type="text" value={hexColor} onChange={handleHexColorChange} />
+      <input type="color" value={hexColor} onChange={handleHexColorChange} />
       <p>
         Converted HSL: {hsl.h.toFixed(2)}, {hsl.s.toFixed(2)}%,{" "}
         {hsl.l.toFixed(2)}%
