@@ -1,44 +1,36 @@
-<img alt="Magic UI - UI Library for Design Engineers" src="https://cdn.magicui.design/bento-grid.gif" width="100%">
-<h3 align="center">Magic UI</h3>
-<p align="center">
-    UI Library for Design Engineers
-</p>
-<div align="center">
-  <a href="https://github.com/magicuidesign/magicui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/magicuidesign/magicui"></a>
-  <a href="https://twitter.com/magicuidesign"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/magicuidesign"></a>
-  <a href="https://github.com/magicuidesign/magicui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
-  <img alt="Discord" src="https://img.shields.io/discord/1151315619246002176">
-  
-</div>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Documentation
+## Getting Started
 
-Visit https://magicui.design/docs to view the documentation.
+First, run the development server:
 
-## Contributing
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Visit our [contributing guide](https://github.com/magicuidesign/magicui/blob/main/CONTRIBUTING.md) to learn how to contribute. It only takes ~5 minutes to add your own!
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Let's talk
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-<a href="https://cal.com/dillionverma/magicui?utm_source=banner&utm_campaign=oss"><img alt="Book us with Cal.com" src="https://cal.com/book-with-cal-dark.svg" /></a>
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Authors
+## Learn More
 
-<a href="https://github.com/magicuidesign/magicui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=magicuidesign/magicui" />
-</a>
+To learn more about Next.js, take a look at the following resources:
 
-## Deploy
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmagicuidesign%2Fmagicui)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/kd94U5?referralCode=xaYd2G)
+## Deploy on Vercel
 
-## Stats
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-![Alt](https://repobeats.axiom.co/api/embed/38b63c4514a8a4cd7d1307985af2889c78d67bcc.svg 'Repobeats analytics image')
-
-## License
-
-Licensed under the [MIT license](https://github.com/magicuidesign/magicui/blob/main/LICENSE.md).
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
