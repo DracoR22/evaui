@@ -1,6 +1,6 @@
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { ChevronRight, HeartHandshake } from "lucide-react";
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+import { ChevronRight, HeartHandshake } from 'lucide-react'
 
 export default function CTASection() {
   return (
@@ -11,18 +11,16 @@ export default function CTASection() {
             <HeartHandshake className="mx-auto size-16 text-black dark:text-white lg:size-24" />
           </div>
           <div className="z-10 mt-4 flex flex-col items-center text-center text-black dark:text-white">
-            <h1 className="text-3xl font-bold lg:text-4xl">
-              Looking for templates instead?
-            </h1>
+            <h1 className="text-3xl font-bold lg:text-4xl">Looking for templates instead?</h1>
             <p className="mt-2">Check out Magic UI Pro</p>
             <a
               href="https://pro.magicui.design/"
               className={cn(
                 buttonVariants({
-                  size: "lg",
-                  variant: "outline",
+                  size: 'lg',
+                  variant: 'outline',
                 }),
-                "group mt-4 rounded-[2rem] px-6",
+                'group mt-4 rounded-[2rem] px-6',
               )}
             >
               Get Magic UI Pro
@@ -33,5 +31,5 @@ export default function CTASection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

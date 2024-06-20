@@ -1,20 +1,12 @@
-"use client";
+'use client'
 
-import * as React from "react";
+import * as React from 'react'
 
-interface ComponentInstallationProps
-  extends React.HTMLAttributes<HTMLDivElement> {}
+interface ComponentInstallationProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function ComponentInstallation({
-  children,
-  className,
-  ...props
-}: ComponentInstallationProps) {
+export function ComponentInstallation({ children, className, ...props }: ComponentInstallationProps) {
   return (
-    <div
-      className="not-prose mt-8 grid gap-4 sm:grid-cols-2 sm:gap-6"
-      {...props}
-    >
+    <div className="not-prose mt-8 grid gap-4 sm:grid-cols-2 sm:gap-6" {...props}>
       <a
         className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
         href="/docs/installation/react"
@@ -36,20 +28,13 @@ export function ComponentInstallation({
         className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
         href="/docs/installation/vue"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="ml-2 h-10 w-10"
-          viewBox="0 0 18 8"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-10 w-10" viewBox="0 0 18 8">
           <title>Vue.js</title>
           <path
             fill="currentColor"
             d="M2.717 1H.5a.5.5 0 0 0-.432.752l7 12a.5.5 0 0 0 .864 0l7-12A.5.5 0 0 0 14.5 1h-2.217L7.5 8.972z"
           />
-          <path
-            fill="currentColor"
-            d="M11.117 1H8.19L7.5 2.382L6.809 1H3.883L7.5 7.028z"
-          />
+          <path fill="currentColor" d="M11.117 1H8.19L7.5 2.382L6.809 1H3.883L7.5 7.028z" />
         </svg>
         <p className="font-medium">Vue.js</p>
       </a>
@@ -58,11 +43,7 @@ export function ComponentInstallation({
         className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
         href="/docs/installation/svelte"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-10"
-          viewBox="0 0 18 14"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 18 14">
           <title>Svelte</title>
           <path
             fill="currentColor"
@@ -74,5 +55,5 @@ export function ComponentInstallation({
         <p className="mt-3 font-medium">Svelte</p>
       </a>
     </div>
-  );
+  )
 }

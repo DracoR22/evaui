@@ -1,56 +1,41 @@
-"use client";
-import ComponentWrapper from "@/components/component-wrapper";
-import { Icons } from "@/components/icons";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
-import { registry } from "@/registry/index";
-import { RotateCcw } from "lucide-react";
-import * as React from "react";
-import { Button } from "./ui/button";
+'use client'
+import ComponentWrapper from '@/components/component-wrapper'
+import { Icons } from '@/components/icons'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { cn } from '@/lib/utils'
+import { registry } from '@/registry/index'
+import { RotateCcw } from 'lucide-react'
+import * as React from 'react'
+import { Button } from './ui/button'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
-  name: string;
-  align?: "center" | "start" | "end";
+  name: string
+  align?: 'center' | 'start' | 'end'
 }
 
-export function ComponentPreview({
-  name,
-  children,
-  className,
-  align = "center",
-  ...props
-}: ComponentPreviewProps) {
-  const [key, setKey] = React.useState(0); // State to trigger re-render of preview
-  const Codes = React.Children.toArray(children) as React.ReactElement[];
-  const Code = Codes[0]; // first child
+export function ComponentPreview({ name, children, className, align = 'center', ...props }: ComponentPreviewProps) {
+  const [key, setKey] = React.useState(0) // State to trigger re-render of preview
+  const Codes = React.Children.toArray(children) as React.ReactElement[]
+  const Code = Codes[0] // first child
 
   const Preview = React.useMemo(() => {
-    const Component = registry[name]?.component;
+    const Component = registry[name]?.component
 
     if (!Component) {
-      console.error(`Component with name "${name}" not found in registry.`);
+      console.error(`Component with name "${name}" not found in registry.`)
       return (
         <p className="text-sm text-muted-foreground">
-          Component{" "}
-          <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">
-            {name}
-          </code>{" "}
+          Component <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">{name}</code>{' '}
           not found in registry.
         </p>
-      );
+      )
     }
 
-    return <Component />;
-  }, [name, key]);
+    return <Component />
+  }, [name, key])
 
   return (
-    <div
-      className={cn(
-        "relative my-4 flex flex-col space-y-2 lg:max-w-[120ch]",
-        className,
-      )}
-      {...props}
-    >
+    <div className={cn('relative my-4 flex flex-col space-y-2 lg:max-w-[120ch]', className)} {...props}>
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
         <div className="flex items-center justify-between pb-3">
           <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
@@ -91,12 +76,10 @@ export function ComponentPreview({
         </TabsContent>
         <TabsContent value="code">
           <div className="flex flex-col space-y-4">
-            <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-              {Code}
-            </div>
+            <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">{Code}</div>
           </div>
         </TabsContent>
       </Tabs>
     </div>
-  );
+  )
 }

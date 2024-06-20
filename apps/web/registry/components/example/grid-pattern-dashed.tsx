@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { cn } from "@/lib/utils";
-import GridPattern from "@/registry/components/magicui/grid-pattern";
+import { cn } from '@/lib/utils'
+import GridPattern from '@/registry/components/magicui/grid-pattern'
 
 const GridPatternDashed = () => {
   return (
@@ -14,13 +14,11 @@ const GridPatternDashed = () => {
         height={30}
         x={-1}
         y={-1}
-        strokeDasharray={"4 2"}
-        className={cn(
-          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
-        )}
+        strokeDasharray={'4 2'}
+        className={cn('[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]')}
       />
     </div>
-  );
-};
+  )
+}
 
-export default GridPatternDashed;
+export default GridPatternDashed

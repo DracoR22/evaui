@@ -1,37 +1,34 @@
-"use client";
+'use client'
 
-import { cubicBezier, motion } from "framer-motion";
-import { Clock, Download, MessageCircle, Star } from "lucide-react";
+import { cubicBezier, motion } from 'framer-motion'
+import { Clock, Download, MessageCircle, Star } from 'lucide-react'
 
 const texts = [
   {
     id: 1,
-    header: "New Feature Release.",
+    header: 'New Feature Release.',
     subheader: "Experience our app's latest features now.",
     icon: <Star />,
   },
   {
     id: 2,
-    header: "App Update Available.",
-    subheader:
-      "A new update is available for download. Get the latest version!",
+    header: 'App Update Available.',
+    subheader: 'A new update is available for download. Get the latest version!',
     icon: <Download />,
   },
   {
     id: 3,
-    header: "Scheduled Maintenance.",
-    subheader:
-      "Our app will be temporarily unavailable due to scheduled maintenance.",
+    header: 'Scheduled Maintenance.',
+    subheader: 'Our app will be temporarily unavailable due to scheduled maintenance.',
     icon: <Clock />,
   },
   {
     id: 4,
-    header: "Feedback Appreciated.",
-    subheader:
-      "We'd love to hear your thoughts on our app. Share your feedback!",
+    header: 'Feedback Appreciated.',
+    subheader: "We'd love to hear your thoughts on our app. Share your feedback!",
     icon: <MessageCircle />,
   },
-];
+]
 
 export default function FeatureCard2() {
   const itemVariants = {
@@ -54,7 +51,7 @@ export default function FeatureCard2() {
         ease: cubicBezier(0.22, 1, 0.36, 1),
       },
     }),
-  };
+  }
 
   const containerVariants = {
     initial: {},
@@ -63,7 +60,7 @@ export default function FeatureCard2() {
         staggerChildren: 0.1,
       },
     },
-  };
+  }
 
   return (
     <div className="relative h-full w-full max-w-[32rem] transform-gpu rounded-lg border bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] md:max-h-[500px]">
@@ -86,9 +83,7 @@ export default function FeatureCard2() {
                   {text.icon}
                   <p className="text-black dark:text-white">{text.header}</p>
                 </div>
-                <p className="text-gray-400 dark:text-gray-400">
-                  {text.subheader}
-                </p>
+                <p className="text-gray-400 dark:text-gray-400">{text.subheader}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -101,5 +96,5 @@ export default function FeatureCard2() {
         </div>
       </motion.div>
     </div>
-  );
+  )
 }

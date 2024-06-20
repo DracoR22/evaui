@@ -1,4 +1,4 @@
-import { FadeText } from "@/registry/components/magicui/fade-text";
+import { FadeText } from '@/registry/components/magicui/fade-text'
 
 export default async function FadeTextDemo() {
   return (
@@ -36,5 +36,5 @@ export default async function FadeTextDemo() {
         text="Fade Left"
       />
     </div>
-  );
+  )
 }

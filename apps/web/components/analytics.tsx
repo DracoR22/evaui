@@ -1,17 +1,13 @@
-"use client";
+'use client'
 
-import Script from "next/script";
+import Script from 'next/script'
 
 export function Analytics() {
   return (
     <>
-      <Script>{`window.lemonSqueezyAffiliateConfig = { store: "magicui" };`}</Script>
+      <Script id="lemon-squeezy-config">{`window.lemonSqueezyAffiliateConfig = { store: "magicui" };`}</Script>
       <Script src="https://lmsqueezy.com/affiliate.js" defer></Script>
-      <Script
-        async
-        defer
-        src="https://www.googletagmanager.com/gtag/js?id=G-4CVHZX68BT"
-      ></Script>
+      <Script async defer src="https://www.googletagmanager.com/gtag/js?id=G-4CVHZX68BT"></Script>
       <Script id="gtag">
         {`
 window.dataLayer = window.dataLayer || [];
@@ -22,5 +18,5 @@ gtag('config', 'G-4CVHZX68BT');
 `}
       </Script>
     </>
-  );
+  )
 }

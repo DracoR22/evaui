@@ -1,4 +1,4 @@
-import { SeparateAway } from "../magicui/separate-away";
+import { SeparateAway } from '../magicui/separate-away'
 
 export default async function SeparateAwayDemo() {
   return (
@@ -10,5 +10,5 @@ export default async function SeparateAwayDemo() {
       visible_opacity={1}
       className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
     />
-  );
+  )
 }

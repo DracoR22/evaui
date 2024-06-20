@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import { cubicBezier, motion } from "framer-motion";
+import { cubicBezier, motion } from 'framer-motion'
 
 export default function FeatureCard8() {
   const variant1 = {
@@ -17,14 +17,14 @@ export default function FeatureCard8() {
       y: -45,
       scale: 1,
       boxShadow:
-        "rgba(39,127,245,0.15) 0px 20px 70px -10px, rgba(36,42,66,0.04) 0px 10px 24px -8px, rgba(36,42,66,0.06) 0px 1px 4px -1px",
+        'rgba(39,127,245,0.15) 0px 20px 70px -10px, rgba(36,42,66,0.04) 0px 10px 24px -8px, rgba(36,42,66,0.06) 0px 1px 4px -1px',
       transition: {
         delay: 0,
         duration: 0.2,
         ease: cubicBezier(0.22, 1, 0.36, 1),
       },
     },
-  };
+  }
   const variant2 = {
     initial: {
       y: 30,
@@ -41,14 +41,14 @@ export default function FeatureCard8() {
       opacity: 1,
       scale: 1,
       boxShadow:
-        "rgba(245,40,145,0.05) 0px 20px 70px -10px, rgba(36,42,66,0.04) 0px 10px 24px -8px, rgba(36,42,66,0.06) 0px 1px 4px -1px",
+        'rgba(245,40,145,0.05) 0px 20px 70px -10px, rgba(36,42,66,0.04) 0px 10px 24px -8px, rgba(36,42,66,0.06) 0px 1px 4px -1px',
       transition: {
         delay: 0,
         duration: 0.2,
         ease: cubicBezier(0.22, 1, 0.36, 1),
       },
     },
-  };
+  }
   const variant3 = {
     initial: {
       x: 30,
@@ -65,14 +65,14 @@ export default function FeatureCard8() {
       y: 5,
       opacity: 1,
       boxShadow:
-        "rgba(39,245,76,0.15) 0px 20px 70px -10px, rgba(36,42,66,0.04) 0px 10px 24px -8px, rgba(36,42,66,0.06) 0px 1px 4px -1px",
+        'rgba(39,245,76,0.15) 0px 20px 70px -10px, rgba(36,42,66,0.04) 0px 10px 24px -8px, rgba(36,42,66,0.06) 0px 1px 4px -1px',
       transition: {
         delay: 0.05,
         duration: 0.2,
         ease: cubicBezier(0.22, 1, 0.36, 1),
       },
     },
-  };
+  }
 
   const containerVariants = {
     initial: {},
@@ -81,7 +81,7 @@ export default function FeatureCard8() {
         staggerChildren: 0.1,
       },
     },
-  };
+  }
 
   return (
     <div className="relative h-full w-full max-w-[32rem] transform-gpu rounded-lg border bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] md:max-h-[500px]">
@@ -106,9 +106,7 @@ export default function FeatureCard8() {
               </div>
               <div className="w-[calc(100%-3rem)]">
                 <h3 className="text-base font-semibold">Mary</h3>
-                <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                  I think the design can be improved
-                </p>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">I think the design can be improved</p>
               </div>
             </motion.div>
             <motion.div
@@ -126,9 +124,7 @@ export default function FeatureCard8() {
               </div>
               <div className="w-[calc(100%-3rem)]">
                 <h3 className="text-base font-semibold">Joshua</h3>
-                <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                  On it ✅
-                </p>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">On it ✅</p>
               </div>
               <motion.p
                 variants={variant3}
@@ -141,11 +137,9 @@ export default function FeatureCard8() {
         </div>
         <div className="flex w-full flex-col items-start border-t border-neutral-200 p-4 dark:border-neutral-800">
           <h2 className="text-xl font-semibold">Reply</h2>
-          <p className="text-base font-normal text-neutral-500 dark:text-neutral-400">
-            Reply to other creators in app
-          </p>
+          <p className="text-base font-normal text-neutral-500 dark:text-neutral-400">Reply to other creators in app</p>
         </div>
       </motion.div>
     </div>
-  );
+  )
 }

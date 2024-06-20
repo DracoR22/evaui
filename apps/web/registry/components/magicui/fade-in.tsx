@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function FadeIn({
   children,
@@ -10,17 +10,17 @@ export default function FadeIn({
   delay,
   viewTriggerOffset,
 }: {
-  children: React.ReactNode;
-  className?: string;
-  noVertical?: boolean;
-  delay?: number;
-  viewTriggerOffset?: boolean;
+  children: React.ReactNode
+  className?: string
+  noVertical?: boolean
+  delay?: number
+  viewTriggerOffset?: boolean
 }) {
-  const ref = useRef(null);
+  const ref = useRef(null)
   const inView = useInView(ref, {
     once: true,
-    margin: viewTriggerOffset ? "-128px" : "0px",
-  });
+    margin: viewTriggerOffset ? '-128px' : '0px',
+  })
 
   const fadeUpVariants = {
     initial: {
@@ -31,12 +31,12 @@ export default function FadeIn({
       opacity: 1,
       y: 0,
     },
-  };
+  }
 
   return (
     <motion.div
       ref={ref}
-      animate={inView ? "animate" : "initial"}
+      animate={inView ? 'animate' : 'initial'}
       variants={fadeUpVariants}
       className={className}
       initial={false}
@@ -44,10 +44,10 @@ export default function FadeIn({
         duration: 0.6,
         delay: delay || 0,
         ease: [0.21, 0.47, 0.32, 0.98],
-        type: "spring",
+        type: 'spring',
       }}
     >
       {children}
     </motion.div>
-  );
+  )
 }

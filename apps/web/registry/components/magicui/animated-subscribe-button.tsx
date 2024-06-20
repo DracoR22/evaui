@@ -1,26 +1,24 @@
-"use client";
+'use client'
 
-import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import { AnimatePresence, motion } from 'framer-motion'
+import React, { useState } from 'react'
 
 interface AnimatedSubscribeButtonProps {
-  buttonColor: string;
-  buttonTextColor?: string;
-  subscribeStatus: boolean;
-  initialText: React.ReactElement | string;
-  changeText: React.ReactElement | string;
+  buttonColor: string
+  buttonTextColor?: string
+  subscribeStatus: boolean
+  initialText: React.ReactElement | string
+  changeText: React.ReactElement | string
 }
 
-export const AnimatedSubscribeButton: React.FC<
-  AnimatedSubscribeButtonProps
-> = ({
+export const AnimatedSubscribeButton: React.FC<AnimatedSubscribeButtonProps> = ({
   buttonColor,
   subscribeStatus,
   buttonTextColor,
   changeText,
   initialText,
 }) => {
-  const [isSubscribed, setIsSubscribed] = useState<boolean>(subscribeStatus);
+  const [isSubscribed, setIsSubscribed] = useState<boolean>(subscribeStatus)
 
   return (
     <AnimatePresence mode="wait">
@@ -62,5 +60,5 @@ export const AnimatedSubscribeButton: React.FC<
         </motion.button>
       )}
     </AnimatePresence>
-  );
-};
+  )
+}

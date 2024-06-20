@@ -1,9 +1,9 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties } from 'react'
 
 // Modify these
-const MAIN_CIRCLE_SIZE = 210;
-const MAIN_CIRCLE_OPACITY = 0.24;
-const NUM_CIRCLES = 8;
+const MAIN_CIRCLE_SIZE = 210
+const MAIN_CIRCLE_OPACITY = 0.24
+const NUM_CIRCLES = 8
 
 const Ripple = React.memo(() => {
   return (
@@ -23,7 +23,7 @@ const Ripple = React.memo(() => {
         ></div>
       ))}
     </div>
-  );
-});
+  )
+})
 
-export default Ripple;
+export default Ripple

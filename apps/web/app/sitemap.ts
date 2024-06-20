@@ -1,11 +1,11 @@
-import { allDocs, allPages } from "@/.contentlayer/generated";
-import { MetadataRoute } from "next";
-import { headers } from "next/headers";
+import { allDocs, allPages } from '@/.contentlayer/generated'
+import { MetadataRoute } from 'next'
+import { headers } from 'next/headers'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const headersList = headers();
-  let domain = headersList.get("host") as string;
-  let protocol = "https";
+  const headersList = headers()
+  let domain = headersList.get('host') as string
+  let protocol = 'https'
 
   return [
     {
@@ -20,5 +20,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${protocol}://${domain}/docs/${post.slugAsParams}`,
       lastModified: post.date,
     })),
-  ];
+  ]
 }

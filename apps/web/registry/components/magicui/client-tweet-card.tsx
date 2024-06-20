@@ -1,11 +1,7 @@
-"use client";
+'use client'
 
-import {
-  MagicTweet,
-  TweetNotFound,
-  TweetSkeleton,
-} from "@/registry/components/magicui/tweet-card";
-import { TweetProps, useTweet } from "react-tweet";
+import { MagicTweet, TweetNotFound, TweetSkeleton } from '@/registry/components/magicui/tweet-card'
+import { TweetProps, useTweet } from 'react-tweet'
 
 const ClientTweetCard = ({
   id,
@@ -16,15 +12,15 @@ const ClientTweetCard = ({
   onError,
   ...props
 }: TweetProps & { className?: string }) => {
-  const { data, error, isLoading } = useTweet(id, apiUrl, fetchOptions);
+  const { data, error, isLoading } = useTweet(id, apiUrl, fetchOptions)
 
-  if (isLoading) return fallback;
+  if (isLoading) return fallback
   if (error || !data) {
-    const NotFound = components?.TweetNotFound || TweetNotFound;
-    return <NotFound error={onError ? onError(error) : error} />;
+    const NotFound = components?.TweetNotFound || TweetNotFound
+    return <NotFound error={onError ? onError(error) : error} />
   }
 
-  return <MagicTweet tweet={data} components={components} {...props} />;
-};
+  return <MagicTweet tweet={data} components={components} {...props} />
+}
 
-export default ClientTweetCard;
+export default ClientTweetCard

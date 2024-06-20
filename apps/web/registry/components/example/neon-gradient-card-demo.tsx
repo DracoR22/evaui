@@ -1,4 +1,4 @@
-import { NeonGradientCard } from "@/registry/components/magicui/neon-gradient-card";
+import { NeonGradientCard } from '@/registry/components/magicui/neon-gradient-card'
 
 export default async function NeonGradientCardDemo() {
   return (
@@ -7,5 +7,5 @@ export default async function NeonGradientCardDemo() {
         Neon Gradient Card
       </span>
     </NeonGradientCard>
-  );
+  )
 }

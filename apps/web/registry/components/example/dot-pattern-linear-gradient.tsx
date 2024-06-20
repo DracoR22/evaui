@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { cn } from "@/lib/utils";
-import DotPattern from "@/registry/components/magicui/dot-pattern";
+import { cn } from '@/lib/utils'
+import DotPattern from '@/registry/components/magicui/dot-pattern'
 
 const DotPatternDemo2 = () => {
   return (
@@ -15,12 +15,10 @@ const DotPatternDemo2 = () => {
         cx={1}
         cy={1}
         cr={1}
-        className={cn(
-          "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] ",
-        )}
+        className={cn('[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] ')}
       />
     </div>
-  );
-};
+  )
+}
 
-export default DotPatternDemo2;
+export default DotPatternDemo2

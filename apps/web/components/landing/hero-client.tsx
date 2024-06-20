@@ -1,23 +1,23 @@
-"use client";
+'use client'
 
-import { Doc } from "@/.contentlayer/generated";
-import TechStack from "@/components/tech-stack";
-import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { cn } from "@/lib/utils";
-import AnimatedBeamMultipleInputDemo from "@/registry/components/example/animated-beam-multiple-inputs";
-import AnimatedListDemo from "@/registry/components/example/animated-list-demo";
-import BentoDemo from "@/registry/components/example/bento-demo";
-import DockDemo from "@/registry/components/example/dock-demo";
-import OrbitingCirclesDemo from "@/registry/components/example/orbiting-circles-demo";
-import RetroGridDemo from "@/registry/components/example/retro-grid-demo";
-import AnimatedGradientText from "@/registry/components/magicui/animated-gradient-text";
-import { VelocityScroll } from "@/registry/components/magicui/scroll-based-velocity";
-import TypingAnimation from "@/registry/components/magicui/typing-animation";
-import WordRotate from "@/registry/components/magicui/word-rotate";
-import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
+import { Doc } from '@/.contentlayer/generated'
+import TechStack from '@/components/tech-stack'
+import { buttonVariants } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
+import { cn } from '@/lib/utils'
+import AnimatedBeamMultipleInputDemo from '@/registry/components/example/animated-beam-multiple-inputs'
+import AnimatedListDemo from '@/registry/components/example/animated-list-demo'
+import BentoDemo from '@/registry/components/example/bento-demo'
+import DockDemo from '@/registry/components/example/dock-demo'
+import OrbitingCirclesDemo from '@/registry/components/example/orbiting-circles-demo'
+import RetroGridDemo from '@/registry/components/example/retro-grid-demo'
+import AnimatedGradientText from '@/registry/components/magicui/animated-gradient-text'
+import { VelocityScroll } from '@/registry/components/magicui/scroll-based-velocity'
+import TypingAnimation from '@/registry/components/magicui/typing-animation'
+import WordRotate from '@/registry/components/magicui/word-rotate'
+import { motion } from 'framer-motion'
+import { ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function HeroClient({ post }: { post: Doc }) {
   return (
@@ -56,22 +56,11 @@ export default function HeroClient({ post }: { post: Doc }) {
               </div>
 
               <p className="max-w-xl text-balance text-left text-base tracking-tight text-black dark:font-medium dark:text-white md:text-center md:text-lg ">
-                20+ free and open-source animated components built with{" "}
-                <span className="font-bold text-black dark:text-white">
-                  React
-                </span>
-                ,{" "}
-                <span className="font-bold text-black dark:text-white">
-                  Typescript
-                </span>
-                ,{" "}
-                <span className="font-bold text-black dark:text-white">
-                  Tailwind CSS
-                </span>
-                , and{" "}
-                <span className="font-bold text-black dark:text-white">
-                  Framer Motion
-                </span>
+                20+ free and open-source animated components built with{' '}
+                <span className="font-bold text-black dark:text-white">React</span>,{' '}
+                <span className="font-bold text-black dark:text-white">Typescript</span>,{' '}
+                <span className="font-bold text-black dark:text-white">Tailwind CSS</span>, and{' '}
+                <span className="font-bold text-black dark:text-white">Framer Motion</span>
                 .
                 <br />
               </p>
@@ -82,11 +71,11 @@ export default function HeroClient({ post }: { post: Doc }) {
                     href="/components"
                     className={cn(
                       buttonVariants({
-                        variant: "default",
-                        size: "lg",
+                        variant: 'default',
+                        size: 'lg',
                       }),
-                      "gap-2 whitespace-pre md:flex",
-                      "group relative w-full gap-1 rounded-full text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50",
+                      'gap-2 whitespace-pre md:flex',
+                      'group relative w-full gap-1 rounded-full text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50',
                     )}
                   >
                     Browse Components
@@ -96,11 +85,11 @@ export default function HeroClient({ post }: { post: Doc }) {
                     href="/docs"
                     className={cn(
                       buttonVariants({
-                        size: "lg",
-                        variant: "outline",
+                        size: 'lg',
+                        variant: 'outline',
                       }),
-                      "gap-2 whitespace-pre md:flex",
-                      "group relative w-full gap-1 overflow-hidden rounded-full text-sm font-semibold tracking-tighter transition-all duration-150 ease-in-out hover:ring-2 hover:ring-neutral-300 hover:ring-offset-2 hover:ring-offset-inherit dark:hover:ring-black dark:hover:ring-offset-black ",
+                      'gap-2 whitespace-pre md:flex',
+                      'group relative w-full gap-1 overflow-hidden rounded-full text-sm font-semibold tracking-tighter transition-all duration-150 ease-in-out hover:ring-2 hover:ring-neutral-300 hover:ring-offset-2 hover:ring-offset-inherit dark:hover:ring-black dark:hover:ring-offset-black ',
                     )}
                   >
                     Get Started
@@ -116,10 +105,10 @@ export default function HeroClient({ post }: { post: Doc }) {
               className="mx-auto flex w-full items-center justify-between"
               technologies={[
                 // "nextjs",
-                "react",
-                "typescript",
-                "tailwindcss",
-                "framermotion",
+                'react',
+                'typescript',
+                'tailwindcss',
+                'framermotion',
                 // "shadcn",
               ]}
             />
@@ -127,8 +116,8 @@ export default function HeroClient({ post }: { post: Doc }) {
 
           <div className="container relative mx-auto mt-32 w-full max-w-[1000px]">
             <motion.span
-              animate={["initial"]}
-              whileHover={["hover"]}
+              animate={['initial']}
+              whileHover={['hover']}
               variants={{
                 hover: {
                   scale: 1.1,
@@ -142,7 +131,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                   transition: {
                     duration: 2,
                     repeat: Infinity,
-                    repeatType: "reverse",
+                    repeatType: 'reverse',
                   },
                 },
               }}
@@ -176,27 +165,24 @@ export default function HeroClient({ post }: { post: Doc }) {
               <AnimatedListDemo />
               <RetroGridDemo />
               <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-                <TypingAnimation
-                  className="text-4xl font-bold text-black dark:text-white"
-                  text="Typing Animation"
-                />
+                <TypingAnimation className="text-4xl font-bold text-black dark:text-white" text="Typing Animation" />
               </div>
               <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background p-4 md:shadow-xl">
                 <WordRotate
                   className="text-4xl font-bold text-black dark:text-white"
                   words={[
-                    "Web Development.",
-                    "UI/UX Design.",
-                    "Cloud Computing.",
-                    "Web Security.",
-                    "Frontend Frameworks.",
-                    "Backend Architectures.",
-                    "API Design.",
-                    "Content Management Systems.",
-                    "SEO Strategies.",
-                    "Web Performance Optimization.",
-                    "Responsive Design.",
-                    "JavaScript Libraries.",
+                    'Web Development.',
+                    'UI/UX Design.',
+                    'Cloud Computing.',
+                    'Web Security.',
+                    'Frontend Frameworks.',
+                    'Backend Architectures.',
+                    'API Design.',
+                    'Content Management Systems.',
+                    'SEO Strategies.',
+                    'Web Performance Optimization.',
+                    'Responsive Design.',
+                    'JavaScript Libraries.',
                   ]}
                 />
               </div>
@@ -214,5 +200,5 @@ export default function HeroClient({ post }: { post: Doc }) {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,15 +1,15 @@
-"use client";
+'use client'
 
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { cn } from '@/lib/utils'
+import { motion } from 'framer-motion'
 
 interface SeparateAwayProps {
-  upper_text: string;
-  lower_text: string;
-  duration?: number;
-  hidden_opacity?: number;
-  visible_opacity?: number;
-  className?: string;
+  upper_text: string
+  lower_text: string
+  duration?: number
+  hidden_opacity?: number
+  visible_opacity?: number
+  className?: string
 }
 
 export function SeparateAway({
@@ -27,28 +27,16 @@ export function SeparateAway({
       y: custom * 5,
       transition: { duration: duration },
     }),
-  };
+  }
 
   return (
     <div>
-      <motion.h1
-        custom={-1}
-        variants={separate}
-        initial="hidden"
-        animate="visible"
-        className={cn(className)}
-      >
+      <motion.h1 custom={-1} variants={separate} initial="hidden" animate="visible" className={cn(className)}>
         {upper_text}
       </motion.h1>
-      <motion.h1
-        custom={1}
-        variants={separate}
-        initial="hidden"
-        animate="visible"
-        className={cn(className)}
-      >
+      <motion.h1 custom={1} variants={separate} initial="hidden" animate="visible" className={cn(className)}>
         {lower_text}
       </motion.h1>
     </div>
-  );
+  )
 }

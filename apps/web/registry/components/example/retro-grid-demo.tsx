@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import RetroGrid from "@/registry/components/magicui/retro-grid";
+import RetroGrid from '@/registry/components/magicui/retro-grid'
 
 const RetroGridDemo = () => {
   return (
@@ -11,7 +11,7 @@ const RetroGridDemo = () => {
 
       <RetroGrid />
     </div>
-  );
-};
+  )
+}
 
-export default RetroGridDemo;
+export default RetroGridDemo

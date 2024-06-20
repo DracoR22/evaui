@@ -1,4 +1,4 @@
-import FlipText from "@/registry/components/magicui/flip-text";
+import FlipText from '@/registry/components/magicui/flip-text'
 
 export default async function FlipTextDemo() {
   return (
@@ -6,5 +6,5 @@ export default async function FlipTextDemo() {
       className="text-4xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
       word="Flip Text"
     />
-  );
+  )
 }
