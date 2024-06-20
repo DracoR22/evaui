@@ -4,19 +4,14 @@ import {
   defineNestedType,
   makeSource,
 } from "contentlayer/source-files";
-import remarkGfm from "remark-gfm";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
-import { rehypeComponent } from "./src/lib/rehype-component";
-import { visit } from "unist-util-visit";
+import remarkGfm from "remark-gfm";
 import { BlogPosting, WithContext } from "schema-dts";
-
-import * as dotenv from "dotenv";
-
-dotenv.config({
-  path: ".env",
-});
+import { visit } from "unist-util-visit";
+import { env } from "./env.mjs";
+import { rehypeComponent } from "./lib/rehype-component";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -27,7 +22,7 @@ const computedFields = {
   image: {
     type: "string",
     resolve: (post: any) =>
-      `${process.env.NEXT_PUBLIC_APP_URL}/api/og?title=${encodeURI(post.title)}`,
+      `${env.NEXT_PUBLIC_APP_URL}/api/og?title=${encodeURI(post.title)}`,
   },
   slug: {
     type: "string",
@@ -155,7 +150,6 @@ export default makeSource({
         });
       },
       [
-        //@ts-ignore
         rehypePrettyCode,
         {
           theme: "material-theme-palenight",
