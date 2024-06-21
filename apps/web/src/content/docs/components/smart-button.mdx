@@ -1,0 +1,76 @@
+---
+title: Smart Button
+description: A complete featured button
+---
+
+<Steps>
+
+### Installation
+
+Copy and paste the following code into your project.
+
+```text
+components/magicui/animated-beam.tsx
+```
+
+
+</Steps>
+
+## Usage
+
+To create an animated beam, you need a container element with a ref, and two elements with refs that the beam will travel between.
+
+```tsx
+"use client";
+
+import { AnimatedBeam } from "@/components/magicui/animated-beam";
+
+export default function AnimatedBeamDemo() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const div1Ref = useRef<HTMLDivElement>(null);
+  const div2Ref = useRef<HTMLDivElement>(null);
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative flex h-full w-full justify-between"
+    >
+      <AnimatedBeam
+        containerRef={containerRef}
+        fromRef={div1Ref}
+        toRef={div2Ref}
+      />
+      <div
+        ref={div1Ref}
+        className="z-10 h-10 w-10 rounded-full bg-white shadow-xl"
+      />
+      <div
+        ref={div2Ref}
+        className="z-10 h-10 w-10 rounded-full bg-white shadow-xl"
+      />
+    </div>
+  );
+}
+```
+
+## Examples
+
+### Animated Beam Uni-Directional
+
+
+
+### Animated Beam Bi-Directional
+
+
+
+### Animated Beam Multiple Inputs
+
+
+
+### Animated Beam Multiple Outputs
+
+
+
+## Props
+
+### Animated Beam
