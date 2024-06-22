@@ -6,7 +6,9 @@ import React from 'react'
 const HomePage = () => {
   return (
     <div className="m-[100px]">
-      <BentoDemo />
+      <div className="max-w-xl relative">
+        <BentoDemo />
+      </div>
     </div>
   )
 }

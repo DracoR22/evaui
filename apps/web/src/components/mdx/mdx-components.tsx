@@ -1,9 +1,10 @@
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { CopyButton } from './copy-button'
+import { CopyButton } from '../global/copy-button'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
+import { ComponentPreview } from './component-preview'
 
 const CustomLink = (props: any) => {
   const href = props.href
@@ -56,7 +57,7 @@ const components = {
   a: (props: any) => <CustomLink {...props} className={'font-medium underline underline-offset-4'} />,
   Image,
   // Tweet: ({ id }: { id: string }) => <TweetCard id={id} className="not-prose mx-auto" />,
-  // ComponentPreview,
+  ComponentPreview,
   // ComponentSource: (props: any) => <ComponentSource {...props} />,
   // ComponentInstallation: (props: any) => <ComponentInstallation {...props} />,
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (

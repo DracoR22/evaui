@@ -1,5 +1,6 @@
-import { Mdx } from '@/components/global/mdx-components'
+import { Mdx } from '@/components/mdx/mdx-components'
 import { cn } from '@/lib/utils'
+import BentoDemo from '@/registry/components/example/bento-demo'
 import { allDocs } from 'contentlayer/generated'
 import { ChevronRightIcon } from 'lucide-react'
 import { notFound } from 'next/navigation'
@@ -32,8 +33,9 @@ const DocsPage = async ({ params }: DocsPageProps) => {
 
   return (
     <main
-      className={cn('relative py-6 lg:gap-10 lg:py-8 xl:grid ', {
-        'xl:grid-cols-[1fr_300px]': doc.toc,
+      className={cn(' py-6 lg:gap-10 lg:py-8 xl:grid ', {
+        // TODO: Dunno here, maybe remove it at all
+        'xl:grid-cols-[1fr_100px]': doc.toc,
       })}
     >
       <div className="mx-auto w-full min-w-0">
@@ -78,6 +80,7 @@ const DocsPage = async ({ params }: DocsPageProps) => {
         ) : null} */}
         <div className="pb-12 pt-8">
           <Mdx code={doc.body.code} />
+          {/* <BentoDemo /> */}
         </div>
       </div>
     </main>

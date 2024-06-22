@@ -1,8 +1,6 @@
 'use client'
 
-import { User2Icon } from 'lucide-react'
 import { BentoBox, BentoBoxItem } from '../evaui/bento-box'
-import { motion } from 'framer-motion'
 import { Skeleton } from '@/components/ui/skeleton'
 
 const Skeleton2 = () => {
@@ -18,7 +16,7 @@ const items = [
   {
     title: 'The Digital Revolution',
     description: 'Dive into the transformative power of technology.',
-    header: <Skeleton2 />,
+    header: <Skeleton className="w-full h-full rounded-xl" />,
   },
   {
     title: 'The Art of Design',

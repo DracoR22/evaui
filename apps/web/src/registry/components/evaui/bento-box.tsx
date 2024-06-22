@@ -1,8 +1,6 @@
 'use client'
 
-import { Skeleton } from '@/components/ui/skeleton'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 type BentoBoxProps = {
@@ -27,8 +25,7 @@ const BentoBox = ({ children, className }: BentoBoxProps) => {
   )
 }
 
-const BentoBoxItem = ({ icon, title, className, description, header, glowColor = '#7c3aed' }: BentoBoxItemProps) => {
-  // const glowColor = '#7c3aed'
+const BentoBoxItem = ({ icon, title, className, description, header, glowColor = '#fff' }: BentoBoxItemProps) => {
   const captureRef = useRef<HTMLDivElement>(null)
   const overlayRef = useRef<HTMLDivElement>(null)
 
@@ -84,7 +81,7 @@ const BentoBoxItem = ({ icon, title, className, description, header, glowColor =
     <div ref={captureRef} className={cn('relative glow-capture', className)}>
       <div
         className={cn(
-          'group/bento group bg-zinc-900/50 border-2 w-full h-fit lg:h-full border-slate-200/10 rounded-2xl p-4 shadow-black/80 flex flex-col flex-wrap md:items-start items-center md:justify-between justify-center gap-6 backdrop-blur-md glow:ring-1 glow:border-glow glow:ring-glow glow:bg-glow/[.15]',
+          'group/bento group bg-zinc-900/50 border-2 w-full h-full border-slate-200/10 rounded-2xl p-4 shadow-black/80 flex flex-col flex-wrap md:items-start items-center md:justify-between justify-center gap-6 backdrop-blur-md glow:ring-1 glow:border-glow glow:ring-glow glow:bg-glow/[.15]',
         )}
       >
         <div className="h-full w-full">
