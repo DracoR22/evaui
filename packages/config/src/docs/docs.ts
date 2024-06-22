@@ -43,7 +43,7 @@ export const docsConfig = {
       ],
     },
     {
-      title: 'Components',
+      title: 'Smart Components',
       items: [
         {
           title: 'Bento Grid',
@@ -103,7 +103,7 @@ export const docsConfig = {
       ],
     },
     {
-      title: 'Special Effects',
+      title: 'Sections',
       items: [
         {
           title: 'Animated Beam',
