@@ -1,5 +1,5 @@
 // contentlayer.config.ts
-import { rehypeComponent } from './src/lib/rehype-component'
+import { rehypeComponent } from './lib/rehype-component'
 import { defineDocumentType, defineNestedType, makeSource } from 'contentlayer/source-files'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrettyCode from 'rehype-pretty-code'
@@ -69,7 +69,7 @@ export const Doc = defineDocumentType(() => ({
 }))
 
 export default makeSource({
-  contentDirPath: './src/content',
+  contentDirPath: './content',
   documentTypes: [Doc],
   mdx: {
     remarkPlugins: [remarkGfm],

@@ -46,8 +46,8 @@ export const docsConfig = {
       title: 'Smart Components',
       items: [
         {
-          title: 'Bento Grid',
-          href: `/docs/components/bento-grid`,
+          title: 'Bento Box',
+          href: `/docs/components/bento-box`,
           items: [],
         },
         {
