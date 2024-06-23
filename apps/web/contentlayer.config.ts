@@ -16,7 +16,23 @@ const computedFields = {
     type: 'string',
     resolve: (doc: any) => doc._raw.flattenedPath.split('/').slice(1).join('/'),
   },
+  url: {
+    type: 'string',
+    resolve: (post: any) => `/${post._raw.flattenedPath}`,
+  },
 }
+
+const LinksProperties = defineNestedType(() => ({
+  name: 'LinksProperties',
+  fields: {
+    doc: {
+      type: 'string',
+    },
+    api: {
+      type: 'string',
+    },
+  },
+}))
 
 // TODO: Add more fields
 export const Doc = defineDocumentType(() => ({
@@ -40,6 +56,10 @@ export const Doc = defineDocumentType(() => ({
       type: 'boolean',
       default: false,
       required: false,
+    },
+    links: {
+      type: 'nested',
+      of: LinksProperties,
     },
     toc: { type: 'boolean', default: true, required: false },
   },
@@ -97,6 +117,35 @@ export default makeSource({
           },
         },
       ],
+      () => (tree) => {
+        visit(tree, (node) => {
+          if (node?.type === 'element' && node?.tagName === 'div') {
+            if (!('data-rehype-pretty-code-fragment' in node.properties)) {
+              return
+            }
+
+            const preElement = node.children.at(-1)
+            if (preElement.tagName !== 'pre') {
+              return
+            }
+
+            preElement.properties['__withMeta__'] = node.children.at(0).tagName === 'div'
+            preElement.properties['__rawString__'] = node.__rawString__
+
+            if (node.__src__) {
+              preElement.properties['__src__'] = node.__src__
+            }
+
+            if (node.__event__) {
+              preElement.properties['__event__'] = node.__event__
+            }
+
+            if (node.__style__) {
+              preElement.properties['__style__'] = node.__style__
+            }
+          }
+        })
+      },
       [
         rehypeAutolinkHeadings,
         {

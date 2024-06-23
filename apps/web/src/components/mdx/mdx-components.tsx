@@ -5,6 +5,9 @@ import { CopyButton } from '../global/copy-button'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
 import { ComponentPreview } from './component-preview'
+import { ComponentSource } from './component-source'
+import { ComponentInstallation } from './component-installation'
+import TechStack from './tech-stack'
 
 const CustomLink = (props: any) => {
   const href = props.href
@@ -29,7 +32,7 @@ const components = {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-  // TechStack,
+  TechStack,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 className={cn('font-heading mt-2 scroll-m-20 text-4xl font-bold', className)} {...props} />
   ),
@@ -56,10 +59,9 @@ const components = {
   ),
   a: (props: any) => <CustomLink {...props} className={'font-medium underline underline-offset-4'} />,
   Image,
-  // Tweet: ({ id }: { id: string }) => <TweetCard id={id} className="not-prose mx-auto" />,
   ComponentPreview,
-  // ComponentSource: (props: any) => <ComponentSource {...props} />,
-  // ComponentInstallation: (props: any) => <ComponentInstallation {...props} />,
+  ComponentSource: (props: any) => <ComponentSource {...props} />,
+  ComponentInstallation: (props: any) => <ComponentInstallation {...props} />,
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p className={cn('leading-7 [&:not(:first-child)]:mt-6', className)} {...props} />
   ),
@@ -116,7 +118,7 @@ const components = {
     // __yarnCommand__,
     __withMeta__,
     __src__,
-    // __event__,
+    __event__,
     // __style__,
     __name__,
     ...props
@@ -125,7 +127,8 @@ const components = {
     __rawString__?: string
     __withMeta__?: boolean
     __src__?: string
-    // __event__?: Event['name']
+    // @ts-expect-error
+    __event__?: Event['name']
     __name__?: string
   }) => {
     return (
@@ -141,7 +144,7 @@ const components = {
           <CopyButton
             value={__rawString__}
             src={__src__}
-            // event={__event__}
+            event={__event__}
             className={cn('absolute right-4 top-4', __withMeta__ && 'top-16')}
           />
         )}
@@ -166,7 +169,6 @@ interface MDXProps {
 
 export function Mdx({ code }: MDXProps) {
   const Component = useMDXComponent(code)
-
   return (
     <article
       className={cn(

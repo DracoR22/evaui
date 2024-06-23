@@ -1,8 +1,11 @@
 import { Mdx } from '@/components/mdx/mdx-components'
+import { badgeVariants } from '@/components/ui/badge'
+import { getTableOfContents } from '@/lib/toc.'
 import { cn } from '@/lib/utils'
 import BentoDemo from '@/registry/components/example/bento-demo'
 import { allDocs } from 'contentlayer/generated'
-import { ChevronRightIcon } from 'lucide-react'
+import { ChevronRightIcon, ExternalLinkIcon } from 'lucide-react'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Balancer from 'react-wrap-balancer'
 
@@ -29,7 +32,7 @@ const DocsPage = async ({ params }: DocsPageProps) => {
     notFound()
   }
 
-  // const toc = await getTableOfContents(doc.body.raw);
+  const toc = await getTableOfContents(doc.body.raw)
 
   return (
     <main
@@ -52,14 +55,14 @@ const DocsPage = async ({ params }: DocsPageProps) => {
             </p>
           )}
         </div>
-        {/* {doc.links ? (
+        {doc.links ? (
           <div className="flex items-center space-x-2 pt-4">
             {doc.links?.doc && (
               <Link
                 href={doc.links.doc}
                 target="_blank"
                 rel="noreferrer"
-                className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
+                className={cn(badgeVariants({ variant: 'secondary' }), 'gap-1')}
               >
                 Docs
                 <ExternalLinkIcon className="h-3 w-3" />
@@ -70,17 +73,16 @@ const DocsPage = async ({ params }: DocsPageProps) => {
                 href={doc.links.api}
                 target="_blank"
                 rel="noreferrer"
-                className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
+                className={cn(badgeVariants({ variant: 'secondary' }), 'gap-1')}
               >
                 API Reference
                 <ExternalLinkIcon className="h-3 w-3" />
               </Link>
             )}
           </div>
-        ) : null} */}
+        ) : null}
         <div className="pb-12 pt-8">
           <Mdx code={doc.body.code} />
-          {/* <BentoDemo /> */}
         </div>
       </div>
     </main>

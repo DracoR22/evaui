@@ -36,7 +36,7 @@ export function ComponentPreview({ name, children, className, align = 'center', 
   }, [name, key])
 
   return (
-    <div className={cn(' my-4 flex flex-col space-y-2 lg:max-w-[120ch]', className)} {...props}>
+    <div className={cn('my-4 flex flex-col space-y-2 lg:max-w-[120ch]', className)} {...props}>
       <Tabs defaultValue="preview">
         <div className="flex items-center justify-between pb-3">
           <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">

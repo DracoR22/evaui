@@ -3,10 +3,6 @@
 import { BentoBox, BentoBoxItem } from '../evaui/bento-box'
 import { Skeleton } from '@/components/ui/skeleton'
 
-const Skeleton2 = () => {
-  return <div className="bg-indigo-500 animate-pulse h-full w-full rounded-xl"></div>
-}
-
 const items = [
   {
     title: 'The Dawn of Innovation',

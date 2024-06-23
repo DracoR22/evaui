@@ -12,13 +12,13 @@ const ComponentWrapper = ({ className, children }: ComponentWrapperProps) => {
         className,
       )}
     >
-      <div
+      {/* <div
         className={cn(
           `absolute inset-0 h-full w-full`,
           `bg-[radial-gradient(#00000055_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff22_1px,transparent_1px)]`,
           'lab-bg [background-size:16px_16px]',
         )}
-      />
+      /> */}
       {children}
     </div>
   )
