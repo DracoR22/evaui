@@ -2,12 +2,12 @@ import { Mdx } from '@/components/mdx/mdx-components'
 import { badgeVariants } from '@/components/ui/badge'
 import { getTableOfContents } from '@/lib/toc.'
 import { cn } from '@/lib/utils'
-import BentoDemo from '@/registry/components/example/bento-demo'
 import { allDocs } from 'contentlayer/generated'
 import { ChevronRightIcon, ExternalLinkIcon } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Balancer from 'react-wrap-balancer'
+import '@/styles/mdx.css'
 
 type DocsPageProps = {
   params: {

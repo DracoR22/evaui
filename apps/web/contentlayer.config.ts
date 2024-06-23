@@ -100,7 +100,6 @@ export default makeSource({
         })
       },
       [
-        // @ts-expect-error
         rehypePrettyCode,
         {
           theme: 'material-theme-palenight',

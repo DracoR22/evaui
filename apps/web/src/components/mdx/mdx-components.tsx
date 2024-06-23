@@ -11,7 +11,6 @@ import TechStack from './tech-stack'
 
 const CustomLink = (props: any) => {
   const href = props.href
-
   if (href.startsWith('/')) {
     return (
       <Link {...props} href={href}>
@@ -169,6 +168,7 @@ interface MDXProps {
 
 export function Mdx({ code }: MDXProps) {
   const Component = useMDXComponent(code)
+  // console.log(code)
   return (
     <article
       className={cn(

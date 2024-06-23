@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/providers/next-themes-provider'
 
 import '@/styles/globals.css'
 import '@/styles/mdx.css'
+import { TooltipProvider } from '@/components/ui/tooltip'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +28,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {children}
+          <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

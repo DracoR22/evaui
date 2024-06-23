@@ -1,5 +1,5 @@
 import { registry } from '../registry'
-import { UnistNode, UnistTree } from '@evaui/types'
+import { UnistNode, UnistTree } from '@/types/unist'
 import path from 'path'
 import { visit } from 'unist-util-visit'
 import fs from 'fs'
@@ -34,7 +34,6 @@ export function rehypeComponent() {
 
           // Add code as children so that rehype can take over at build time.
           node.children?.push(
-            //@ts-expect-error
             u('element', {
               tagName: 'pre',
               properties: {
@@ -88,8 +87,8 @@ export function rehypeComponent() {
           const filePath = path.join(process.cwd(), src)
           let source = fs.readFileSync(filePath, 'utf8')
 
-          // console.log("name ", name);
-          // console.log("source ", source);
+          console.log('name ', name)
+          console.log('source ', source)
 
           // Replace imports.
           // TODO: Use @swc/core and a visitor to replace this.
@@ -99,7 +98,6 @@ export function rehypeComponent() {
 
           // Add code as children so that rehype can take over at build time.
           node.children?.push(
-            //@ts-expect-error
             u('element', {
               tagName: 'pre',
               properties: {
