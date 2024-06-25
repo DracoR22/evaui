@@ -8,6 +8,7 @@ import { ComponentPreview } from './component-preview'
 import { ComponentSource } from './component-source'
 import { ComponentInstallation } from './component-installation'
 import TechStack from './tech-stack'
+import { Event } from '@/lib/events'
 
 const CustomLink = (props: any) => {
   const href = props.href
@@ -103,7 +104,7 @@ const components = {
     />
   ),
   Step: ({ className, ...props }: React.ComponentProps<'h3'>) => (
-    <div className={cn('font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight', className)} {...props} />
+    <h3 className={cn('font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight', className)} {...props} />
   ),
   Steps: ({ ...props }) => (
     <div className="[&>h3]:step steps mb-12 ml-4 border-l pl-8 [counter-reset:step]" {...props} />
@@ -126,7 +127,6 @@ const components = {
     __rawString__?: string
     __withMeta__?: boolean
     __src__?: string
-    // @ts-expect-error
     __event__?: Event['name']
     __name__?: string
   }) => {

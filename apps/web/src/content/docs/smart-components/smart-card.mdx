@@ -1,0 +1,61 @@
+---
+title: Smart Card
+description: Elegant card with a beautiful mouse hover animation.
+---
+
+<ComponentPreview name="smart-card-demo"/>
+
+## Installation
+
+<Steps>
+
+<Step>Add the following plugin to your `tailwind.config.js` file:</Step>
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{ts,tsx}"],
+  darkMode: "class",
+  theme: {
+    // rest of the code
+  },
+  plugins: [
+    require('tailwindcss-animate'),
+    plugin(
+      function ({ addVariant }) {
+        addVariant('glow', '.glow-capture .glow-overlay &')
+      },
+      {
+        theme: {
+          extend: {
+            colors: {
+              glow: 'color-mix(in srgb, var(--glow-color) calc(<alpha-value> * 100%), transparent)',
+            },
+          },
+        },
+      },
+    ),
+  ],
+};
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+```text
+components/evaui/smart-card.tsx
+```
+
+<ComponentSource name="smart-card" />
+
+</Steps>
+
+## Props
+
+| Prop        | Type   | Description                             | Default |
+| ---------   | ------ | ---------------------------------       | ------- |
+| className   | string | The class name for the component        | ""      |
+| icon        | node   | Icon to identify each card in the grid  | ""      |
+| title       | string | Card title                              | ""      |
+| description | string | Card description                        | ""      |
+| header      | node   | JSX component for above the title       | ""      |
+| color       | string | HEX color around the cursor when hover  | "fff"   |

@@ -46,18 +46,13 @@ export const docsConfig = {
       title: 'Smart Components',
       items: [
         {
-          title: 'Bento Box',
-          href: `/docs/components/bento-box`,
-          items: [],
-        },
-        {
           title: 'Animated List',
           href: `/docs/components/animated-list`,
           items: [],
         },
         {
-          title: 'Tweet Card',
-          href: `/docs/components/tweet-card`,
+          title: 'Smart Card',
+          href: `/docs/smart-components/smart-card`,
           items: [],
         },
         {
@@ -116,8 +111,8 @@ export const docsConfig = {
         //   items: [],
         // },
         {
-          title: 'Border Beam',
-          href: `/docs/components/border-beam`,
+          title: 'Bento Box',
+          href: `/docs/sections/bento-box`,
           items: [],
         },
         {

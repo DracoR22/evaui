@@ -1,12 +1,16 @@
-import { BentoBox, BentoBoxItem } from '../../registry/components/evaui/bento-box'
-import BentoDemo from '../../registry/components/example/bento-demo'
-import { User2Icon } from 'lucide-react'
+import BentoDemo from '@/registry/sections/example/bento-demo'
+import SmartCardDemo from '@/registry/smart-components/example/smart-card-demo'
+import { SmartCard, SmartCardTitle } from '@/registry/smart-components/ui/smart-card'
 import React from 'react'
 
 const HomePage = () => {
   return (
     <div className="m-[100px]">
-      <div className="max-w-xl relative">
+      <div>
+        <SmartCardDemo />
+      </div>
+
+      <div className="mt-[100px]">
         <BentoDemo />
       </div>
     </div>

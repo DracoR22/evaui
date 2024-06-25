@@ -3,6 +3,9 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:packages": "concurrently \"pnpm:build:config\" \"pnpm:build:types\"",
+    "build:config": "pnpm tsc -p ./packages/config/tsconfig.json",
+    "build:types": "pnpm tsc -p ./packages/types/tsconfig.json",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"  --ignore-path .gitignore",
@@ -10,6 +13,7 @@
     "format:write": "pnpm format --write"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "prettier": "^3.2.5",
     "turbo": "latest",
     "typescript": "^5.4.5"

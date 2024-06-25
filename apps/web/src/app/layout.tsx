@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/providers/next-themes-provider'
 
 import '@/styles/globals.css'
-import '@/styles/mdx.css'
+
 import { TooltipProvider } from '@/components/ui/tooltip'
 
 const inter = Inter({ subsets: ['latin'] })

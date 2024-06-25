@@ -1,6 +1,6 @@
 import { Mdx } from '@/components/mdx/mdx-components'
 import { badgeVariants } from '@/components/ui/badge'
-import { getTableOfContents } from '@/lib/toc.'
+import { getTableOfContents } from '@/lib/toc'
 import { cn } from '@/lib/utils'
 import { allDocs } from 'contentlayer/generated'
 import { ChevronRightIcon, ExternalLinkIcon } from 'lucide-react'
@@ -8,6 +8,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Balancer from 'react-wrap-balancer'
 import '@/styles/mdx.css'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import { DashboardTableOfContents } from '@/components/toc/toc'
 
 type DocsPageProps = {
   params: {
@@ -84,7 +86,20 @@ const DocsPage = async ({ params }: DocsPageProps) => {
         <div className="pb-12 pt-8">
           <Mdx code={doc.body.code} />
         </div>
+        {/* TODO: DOCA PAGER */}
       </div>
+      {doc.toc && (
+        <div className="hidden text-sm xl:block">
+          <div className="sticky top-16 -mt-10 pt-4">
+            <ScrollArea className="pb-10">
+              <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
+                <DashboardTableOfContents toc={toc} />
+                {/* <SidebarCTA/> */}
+              </div>
+            </ScrollArea>
+          </div>
+        </div>
+      )}
     </main>
   )
 }
