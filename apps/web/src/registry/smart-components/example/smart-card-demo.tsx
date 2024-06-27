@@ -1,7 +1,7 @@
 'use client'
 
 import { Select, SelectTrigger } from '@/components/ui/select'
-import { SmartCard, SmartCardContent, SmartCardTitle } from '@/evaui/smart-card'
+import { SmartCard, SmartCardContent, SmartCardTitle } from '@/components/evaui/smart-card'
 import { ChevronDownIcon } from 'lucide-react'
 
 export default function SmartCardDemo() {

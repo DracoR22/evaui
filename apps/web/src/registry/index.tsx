@@ -7,6 +7,11 @@ const ui: Registry = {
     type: 'components:ui',
     files: ['src/registry/sections/ui/bento-box.tsx'],
   },
+  'brand-slider': {
+    name: 'brand-slider',
+    type: 'components:ui',
+    files: ['src/registry/sections/ui/brand-slider.tsx'],
+  },
   'smart-card': {
     name: 'smart-card',
     type: 'components:ui',
@@ -37,6 +42,12 @@ const example: Registry = {
     type: 'components:example',
     files: ['src/registry/smart-components/example/card-stack-demo.tsx'],
     component: React.lazy(() => import('@/registry/smart-components/example/card-stack-demo')),
+  },
+  'brand-slider-demo': {
+    name: 'brand-slider-demo',
+    type: 'components:example',
+    files: ['src/registry/sections/example/brand-slider-demo.tsx'],
+    component: React.lazy(() => import('@/registry/sections/example/brand-slider-demo')),
   },
 }
 

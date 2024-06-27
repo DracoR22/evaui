@@ -1,9 +1,11 @@
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { MainNav } from './main-nav'
-import { buttonVariants } from '../ui/button'
+import { Button, buttonVariants } from '../ui/button'
 import { siteConfig } from '@evaui/config'
 import { Icons } from '../icons/icons'
+import { ModeToggle } from '../global/mode-toggle'
+import { CommandMenu } from './command-menu'
 
 interface SiteHeaderProps {
   user?: any // TODO: Replace for acutal Nextauth user
@@ -20,7 +22,7 @@ export async function SiteHeader({ user }: SiteHeaderProps) {
         <MainNav />
         {/* <MobileNav/> */}
         <div className="flex flex-1 items-center justify-between gap-2 md:justify-end">
-          <Link
+          {/* <Link
             className={cn(
               buttonVariants(),
               'hidden max-w-52 gap-2 overflow-hidden whitespace-pre md:flex',
@@ -35,17 +37,15 @@ export async function SiteHeader({ user }: SiteHeaderProps) {
               <span className="ml-1">Go to Shop</span>{' '}
             </div>
             <div className="ml-2 flex items-center gap-1 text-sm md:flex">
-              {/* <StarIcon className="h-4 w-4 text-gray-500 transition-all duration-300 group-hover:text-yellow-300" />
+              <StarIcon className="h-4 w-4 text-gray-500 transition-all duration-300 group-hover:text-yellow-300" />
               <NumberTicker
                 value={stars}
                 className="font-display font-medium text-white dark:text-black"
-              /> */}
+              />
             </div>
-          </Link>
-
-          <div className="w-full flex-1 md:w-auto md:flex-none">{/* <CommandMenu/> */}</div>
-          <nav className="flex items-center gap-1">
-            <Link href={siteConfig.links.discord} target="_blank" rel="noreferrer">
+          </Link> */}
+          <div>
+            {/* <Link href={siteConfig.links.discord} target="_blank" rel="noreferrer">
               <div
                 className={cn(
                   buttonVariants({
@@ -57,20 +57,7 @@ export async function SiteHeader({ user }: SiteHeaderProps) {
                 <Icons.discord className="h-4 w-4" />
                 <span className="sr-only">Discord</span>
               </div>
-            </Link>
-            <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: 'ghost',
-                  }),
-                  'w-9 px-0',
-                )}
-              >
-                <Icons.gitHub className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
+            </Link> */}
             <Link href={siteConfig.links.twitter} target="_blank" rel="noreferrer">
               <div
                 className={cn(
@@ -84,24 +71,19 @@ export async function SiteHeader({ user }: SiteHeaderProps) {
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
-            <Link href={siteConfig.links.instagram} target="_blank" rel="noreferrer">
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: 'ghost',
-                  }),
-                  'w-9 px-0',
-                )}
-              >
-                <Icons.instagram className="h-4 w-4 fill-current" />
-                <span className="sr-only">Instagram</span>
-              </div>
-            </Link>
-            {/* <ModeToggle/> */}
+          </div>
+          <div className="w-full flex-1 md:w-auto md:flex-none">
+            <CommandMenu />
+          </div>
+          <nav className="flex items-center gap-1">
+            <ModeToggle />
           </nav>
+          <div>
+            <Button variant={'outline'}>Login</Button>
+          </div>
         </div>
       </div>
-      <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0" />
+      {/* <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0" /> */}
     </header>
   )
 }

@@ -37,12 +37,7 @@ const DocsPage = async ({ params }: DocsPageProps) => {
   const toc = await getTableOfContents(doc.body.raw)
 
   return (
-    <main
-      className={cn(' py-6 lg:gap-10 lg:py-8 xl:grid ', {
-        // TODO: Dunno here, maybe remove it at all
-        'xl:grid-cols-[1fr_100px]': doc.toc,
-      })}
-    >
+    <main className={cn(' py-6 lg:gap-10 lg:py-8 xl:grid ')}>
       <div className="mx-auto w-full min-w-0">
         <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
           <div className="overflow-hidden text-ellipsis whitespace-nowrap">Docs</div>
@@ -88,18 +83,18 @@ const DocsPage = async ({ params }: DocsPageProps) => {
         </div>
         {/* TODO: DOCA PAGER */}
       </div>
-      {doc.toc && (
+      {/* {doc.toc && (
         <div className="hidden text-sm xl:block">
           <div className="sticky top-16 -mt-10 pt-4">
             <ScrollArea className="pb-10">
               <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
                 <DashboardTableOfContents toc={toc} />
-                {/* <SidebarCTA/> */}
+                <SidebarCTA />
               </div>
             </ScrollArea>
           </div>
         </div>
-      )}
+      )} */}
     </main>
   )
 }

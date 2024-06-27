@@ -5,8 +5,8 @@ export const docsConfig = {
       href: '/components',
     },
     {
-      title: 'Templates',
-      href: 'https://pro.magicui.design',
+      title: 'Shop',
+      href: '/shop',
       external: true,
     },
   ],
@@ -117,8 +117,8 @@ export const docsConfig = {
           items: [],
         },
         {
-          title: 'Shine Border',
-          href: `/docs/components/shine-border`,
+          title: 'Brand Slider',
+          href: `/docs/sections/brand-slider`,
           items: [],
           label: '',
         },

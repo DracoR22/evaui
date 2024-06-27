@@ -1,6 +1,6 @@
 'use client'
 
-import { BentoBox, BentoBoxItem } from '@/evaui/bento-box'
+import { BentoBox, BentoBoxItem } from '@/components/evaui/bento-box'
 import { Skeleton } from '@/components/ui/skeleton'
 
 const items = [
