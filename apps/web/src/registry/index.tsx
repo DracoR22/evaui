@@ -12,6 +12,11 @@ const ui: Registry = {
     type: 'components:ui',
     files: ['src/registry/smart-components/ui/smart-card.tsx'],
   },
+  'card-stack': {
+    name: 'card-stack',
+    type: 'components:ui',
+    files: ['src/registry/smart-components/ui/card-stack.tsx'],
+  },
 }
 
 const example: Registry = {
@@ -26,6 +31,12 @@ const example: Registry = {
     type: 'components:example',
     files: ['src/registry/smart-components/example/smart-card-demo.tsx'],
     component: React.lazy(() => import('@/registry/smart-components/example/smart-card-demo')),
+  },
+  'card-stack-demo': {
+    name: 'card-stack-demo',
+    type: 'components:example',
+    files: ['src/registry/smart-components/example/card-stack-demo.tsx'],
+    component: React.lazy(() => import('@/registry/smart-components/example/card-stack-demo')),
   },
 }
 

@@ -1,14 +1,15 @@
 import BentoDemo from '@/registry/sections/example/bento-demo'
 import SmartCardDemo from '@/registry/smart-components/example/smart-card-demo'
 import { SmartCard, SmartCardTitle } from '@/registry/smart-components/ui/smart-card'
-import { StackCard } from '@/registry/smart-components/ui/stack-card'
+import { CardStack } from '@/registry/smart-components/ui/card-stack'
 import React from 'react'
+import CardStackDemo from '@/registry/smart-components/example/card-stack-demo'
 
 const HomePage = () => {
   return (
     <div className="m-[100px]">
       <div className="h-[500px] flex justify-center w-full">
-        <StackCard />
+        <CardStackDemo />
       </div>
       <div>
         <SmartCardDemo />

@@ -31,7 +31,7 @@ export async function SiteHeader({ user }: SiteHeaderProps) {
           >
             <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40" />
             <div className="flex items-center">
-              <Icons.gitHub className="h-4 w-4" />
+              <Icons.gitHub className="h- w-4" />
               <span className="ml-1">Go to Shop</span>{' '}
             </div>
             <div className="ml-2 flex items-center gap-1 text-sm md:flex">

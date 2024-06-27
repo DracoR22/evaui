@@ -14,7 +14,7 @@ export function MainNav() {
   return (
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="relative mr-6 flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
+        <Icons.logo className="size-10 border border-muted-neutral-800 rounded-xl" />
         <span className="hidden font-bold md:inline-block">{siteConfig.name}</span>
         <Badge variant="secondary">Beta</Badge>
       </Link>

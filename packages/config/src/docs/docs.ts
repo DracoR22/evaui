@@ -56,9 +56,10 @@ export const docsConfig = {
           items: [],
         },
         {
-          title: 'Marquee',
-          href: `/docs/components/marquee`,
+          title: 'Card Stack',
+          href: `/docs/smart-components/card-stack`,
           items: [],
+          label: 'new',
         },
         {
           title: 'Globe',

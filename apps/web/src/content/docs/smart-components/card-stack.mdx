@@ -1,0 +1,29 @@
+---
+title: Card Stack
+description: Drag and drop each card in a stack
+---
+
+<ComponentPreview name="card-stack-demo"/>
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+```text
+components/evaui/card-stack.tsx
+```
+
+<ComponentSource name="card-stack" />
+
+</Steps>
+
+## Props
+
+| Prop        | Type   | Description                             | Default |
+| ---------   | ------ | ---------------------------------       | ------- |
+| className   | string | The class name for the component        | ""      |
+| items       | `Array<{imageUrl: string; title: string; content: ReactNode}>` | Cards to render in the stack | ""      |
+| offset       | number | Offset of the cards in the stack                           | ""      |
+| scaleFactor | string | Scale of the cards in the stack                       | ""      |
