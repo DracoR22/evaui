@@ -12,6 +12,11 @@ const ui: Registry = {
     type: 'components:ui',
     files: ['src/registry/sections/ui/brand-slider.tsx'],
   },
+  'review-grid': {
+    name: 'review-grid',
+    type: 'components:ui',
+    files: ['src/registry/sections/ui/review-grid.tsx'],
+  },
   'smart-card': {
     name: 'smart-card',
     type: 'components:ui',
@@ -31,6 +36,18 @@ const example: Registry = {
     files: ['src/registry/sections/example/bento-demo.tsx'],
     component: React.lazy(() => import('@/registry/sections/example/bento-demo')),
   },
+  'brand-slider-demo': {
+    name: 'brand-slider-demo',
+    type: 'components:example',
+    files: ['src/registry/sections/example/brand-slider-demo.tsx'],
+    component: React.lazy(() => import('@/registry/sections/example/brand-slider-demo')),
+  },
+  'review-grid-demo': {
+    name: 'review-grid-demo',
+    type: 'components:example',
+    files: ['src/registry/sections/example/review-grid-demo.tsx'],
+    component: React.lazy(() => import('@/registry/sections/example/review-grid-demo')),
+  },
   'smart-card-demo': {
     name: 'smart-card-demo',
     type: 'components:example',
@@ -42,12 +59,6 @@ const example: Registry = {
     type: 'components:example',
     files: ['src/registry/smart-components/example/card-stack-demo.tsx'],
     component: React.lazy(() => import('@/registry/smart-components/example/card-stack-demo')),
-  },
-  'brand-slider-demo': {
-    name: 'brand-slider-demo',
-    type: 'components:example',
-    files: ['src/registry/sections/example/brand-slider-demo.tsx'],
-    component: React.lazy(() => import('@/registry/sections/example/brand-slider-demo')),
   },
 }
 

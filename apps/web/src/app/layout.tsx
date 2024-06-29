@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { cn, constructMetadata } from '@/lib/utils'
 import { ThemeProvider } from '@/components/providers/next-themes-provider'
@@ -13,6 +13,7 @@ export const metadata: Metadata = constructMetadata({
   title: 'Eva UI',
   description: 'TODO: ',
 })
+
 export default function RootLayout({
   children,
 }: Readonly<{

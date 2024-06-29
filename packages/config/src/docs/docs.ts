@@ -145,8 +145,8 @@ export const docsConfig = {
           label: 'New',
         },
         {
-          title: 'Particles',
-          href: `/docs/components/particles`,
+          title: 'Review Grid',
+          href: `/docs/sections/review-grid`,
           items: [],
           label: 'New',
         },

@@ -31,7 +31,7 @@ const CARD_DATA = [
 const CardStackDemo = () => {
   return (
     <div>
-      <div className="mt-[120px] -mb-[70px]">
+      <div className="mt-[120px] -mb-[70px] mr-4">
         <CardStack items={CARD_DATA} />
       </div>
     </div>

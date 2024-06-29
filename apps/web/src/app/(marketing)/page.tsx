@@ -7,9 +7,14 @@ import CardStackDemo from '@/registry/smart-components/example/card-stack-demo'
 import { BrandSlider } from '@/registry/sections/ui/brand-slider'
 import BrandSliderDemo from '@/registry/sections/example/brand-slider-demo'
 
+import ReviewGridDemo from '@/registry/sections/example/review-grid-demo'
+
 const HomePage = () => {
   return (
     <div className="m-[100px]">
+      <div className="">
+        <ReviewGridDemo />
+      </div>
       <div className="h-[500px] mt-10">
         <BrandSliderDemo />
       </div>
